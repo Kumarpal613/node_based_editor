@@ -1,0 +1,80 @@
+/* src/components/SidebarLeft.css */
+
+/* --- Main Container --- */
+.left-panel {
+  width: 250px;             /* Fixed width */
+  min-width: 250px;         /* Prevent shrinking */
+  height: 100%;             /* Full height */
+  background-color: #1e1e1e; /* Dark background color (Critical) */
+  border-right: 1px solid #333; /* Separator line on the right */
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  z-index: 10;              /* Ensure it sits above the canvas if needed */
+}
+
+/* --- Header Section --- */
+.panel-header {
+  padding: 15px;
+  background-color: #252525; /* Slightly lighter header */
+  border-bottom: 1px solid #333;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eee;
+  letter-spacing: 0.5px;
+}
+
+/* --- Content Area --- */
+.panel-content {
+  padding: 15px;
+  overflow-y: auto; /* Scroll if list is too long */
+  flex: 1;
+}
+
+.category-wrapper {
+  margin-bottom: 24px;
+}
+
+/* --- Category Titles (Input, Filters, etc.) --- */
+.category-title {
+  color: #888;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  padding-left: 4px;
+}
+
+/* --- Node Buttons --- */
+.node-btn {
+  background-color: #2a2a2a; /* Dark button background */
+  border: 1px solid #3f3f3f;
+  color: #ddd;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: grab;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.node-btn:hover {
+  background-color: #3f3f3f;
+  border-color: #666;
+  color: #fff;
+  transform: translateX(4px); /* Slide effect on hover */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.node-btn:active {
+  cursor: grabbing;
+  transform: scale(0.98);
+}

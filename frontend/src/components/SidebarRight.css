@@ -1,0 +1,80 @@
+/* src/components/SidebarRight.css */
+
+.right-panel {
+  /* 1. FORCE FIXED WIDTH */
+  width: 300px;
+  min-width: 300px; 
+  max-width: 300px; /* Prevents expansion */
+  
+  height: 100%;
+  background-color: #1e1e1e;
+  border-left: 1px solid #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /* Critical: Prevents flexbox from squishing it */
+  overflow-y: auto;
+}
+
+.panel-header {
+  padding: 15px;
+  background-color: #252525;
+  border-bottom: 1px solid #333;
+  flex-shrink: 0;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #eee;
+}
+
+.inspector-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Image Preview Box --- */
+.preview-box {
+  margin-top: 10px;
+  width: 100%;           /* Fill the 300px panel */
+  height: 200px;         /* Fixed height box */
+  background-color: #000;
+  border: 1px dashed #444;
+  border-radius: 6px;
+  
+  /* Flex centers the image inside the box */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;      /* Hides anything sticking out */
+}
+
+/* --- THE IMAGE FIX --- */
+.preview-img {
+  max-width: 100%;       /* Never wider than 300px */
+  max-height: 100%;      /* Never taller than 200px */
+  object-fit: contain;   /* Scales down nicely without stretching */
+  display: block;
+}
+
+/* --- Info Rows --- */
+.info-row {
+  margin-bottom: 15px;
+  /* Ensure text doesn't overflow horizontally */
+  overflow: hidden; 
+}
+
+.info-value {
+  font-family: monospace;
+  background: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  
+  /* Wrap long text (like long URLs or IDs) */
+  word-break: break-all; 
+  white-space: normal;
+}

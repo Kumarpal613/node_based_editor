@@ -1,0 +1,24 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# Environment Variables (CRITICAL)
+.env
+.flaskenv
+
+# Flask instance folder (often contains database files)
+instance/
+.webassets-cache
+
+# Database
+*.sqlite3
+*.db
+
+# IDE/Editor settings
+.vscode/
+.idea/
